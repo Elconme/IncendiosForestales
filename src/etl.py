@@ -1,7 +1,9 @@
 import pandas as pd
+import zipfile
 
-def load_data(data_path="./Datos/incendios.csv", sep=';'):
-  df = pd.read_csv(data_path, sep=sep)
+def load_data(data_path="./Datos/incendios.zip", sep=';'):
+  zf = zipfile.ZipFile(data_path) 
+  df = pd.read_csv(zf.open('incendios.csv');sep=sep)
   df.isna().sum()
   df_model = df.drop(['puntosinicioincendio','idnivelgravedadmaximo','probabilidadignicion' ,'idgradoresponsabilidad','idautorizacionactividad','direccionviento','idinvestigacioncausa','diastormenta','huso','idmotivacion','diasultimalluvia','iddatum','x','y'], axis=1) #,'humrelativa','velocidadviento','tempmaxima' 
   df_model = df_model.dropna()
