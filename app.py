@@ -23,6 +23,8 @@ TF_ENABLE_ONEDNN_OPTS=0
 
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP], suppress_callback_exceptions=True)
 
+server = app.server
+
 # API tiempo para datos en tiempo real
 api_key = "6a2d1d6819634ac39e3222734241911"
 temperature, humidity, wind_veloc, loc, city = get_weather_data(api_key)
