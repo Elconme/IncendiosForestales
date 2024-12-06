@@ -23,7 +23,7 @@ TF_ENABLE_ONEDNN_OPTS=0
 
 app = Dash(__name__, title="app-deploy", external_stylesheets=[dbc.themes.BOOTSTRAP], suppress_callback_exceptions=True)
 
-server = app.server
+# server = app.server
 
 # API tiempo para datos en tiempo real
 api_key = "6a2d1d6819634ac39e3222734241911"
