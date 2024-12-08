@@ -377,4 +377,4 @@ def predict(n_clicks, comunidad_id, provincia_id, lat_id, long_id, altitud_id, l
     return ""
 
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run(debug=True)
